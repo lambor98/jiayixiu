@@ -1,0 +1,179 @@
+#app{
+   
+    .mid,.mid1,.mid2{
+        padding-bottom: 30px;
+        margin: auto;
+        .mid_1,.mid1_1,.mid2_1{
+            width: 390px;
+            height: 80px;
+            margin: auto;
+            text-align: center;
+            line-height: 80px;
+            font-size: 34px;
+          
+        }
+        .mid_1{  background: url(../images/wechat_1.jpg) 20px 0px  no-repeat;}
+        .mid1_1{  background: url(../images/icon_22.png) 0px 25px  no-repeat;background-size: 36px;}
+        .line{max-width: 100%;margin: auto;}
+        .mid_a{
+            margin: auto;
+            max-width: 800px;
+            margin-top: 18px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+
+            .mid_a_box{
+                width: 342px;
+                height: 570px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+             
+                .mid_a_box_b{
+                    width: 340px;
+                    height: 160px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .sanjiao{
+                        width: 20px;
+                        height: 20px;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                    .sj1{
+                        right: -340px;
+                        left: 0;
+                    }
+                    .sj2{
+                       left: -340px;
+                       right: 0;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: white;
+                        text-indent: 2em;
+                        text-align: left;
+                        padding: 0 30px;
+                    }
+                
+                }
+            }
+            .mid_a_lt{
+                .mid_a_box_a{
+                    background: #5eb3ba;
+                        .sanjiao{
+                        background: #5eb3ba;  
+                        }
+                    
+                    &:last-child{
+                    background: #d26f6f !important;
+                        .sanjiao{
+                        background: #d26f6f;  
+                        }
+                    }
+                }
+            }
+            .mid_a_rt{
+                .mid_a_box_a{
+                    background: #e79e5b;
+                    .sanjiao{
+                        background: #e79e5b;  
+                    }
+                }
+            }
+            .mid_a_pic{
+                width:145px;
+                height: 570px;
+            }
+        }
+    }
+    .mid1{
+       background: #f8f9f8;
+        .mid1_a{
+            max-width: 800px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            li{
+                img{width: 126px;padding: 40px 44px;}
+            }
+            p{
+                color: #999;
+                text-align: center;
+                font-size: 14px;
+                &:first-child{
+                    font-size: 18px;
+                    color: #49b7ea;
+                    margin-bottom: 10px;
+                  
+                }
+            }
+        }
+    }
+    .mid2{
+        background: #f2f2f2;
+        .mid2_a{
+            max-width: 856px;
+            margin: auto;
+            .mid2_a_city{
+               p{color: #666666;
+                    &:last-child{
+                        color: #999999;
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .mid2_a_repair{
+                display: flex;
+                justify-content: space-around;
+                // align-items: center;
+                margin-top: 50px;
+                img{width: 580px;}
+                .mid2_a_repair_2{
+                    font-size: 14px;
+                    line-height: 25px;
+                    color: #333;
+                    width: 194px;
+                    a{
+                        color: #01a6e6;
+                        font-size: 16px;
+                        text-decoration:underline;
+                        display: block;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    .nav_right{
+        width: 100px;
+        height: 230px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        z-index: 9999;
+        .nav_btn{
+            cursor: pointer;
+            img{
+                width: 96px;
+                opacity: .7;
+                &:hover{
+                    opacity: 1.8;
+                }
+            }
+        }
+      
+    }
+}

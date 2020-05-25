@@ -1,0 +1,96 @@
+
+    .topNav{
+       display: flex;
+       width: 100%;
+       min-width:1080px ;
+       border-bottom: .1px solid #01A6E6;
+      .nav_box{
+        width: 1080px;
+        height: 65px;
+        max-width: 1081px;
+        max-height: 65px;
+        margin: auto ;
+        display: flex;
+        .logo{
+          display: flex;
+           img{
+            width: 62px;
+            height: 62px;
+            display: block;
+          }
+         .logoName{
+ 
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           p:first-child{
+             font-size: 18px !important;
+             font-family: "楷体";
+             font-weight: bold;
+           }
+           p{
+             color:#373737;
+             font-size: 12px !important;
+           }
+         }
+        }
+        .city{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 10px;
+          p{color: #999999;font-size: 12px;   text-align: center;}
+          p:first-child{
+            letter-spacing: .5ch;
+            color:#3d3a3a;
+          }
+          p:last-child{
+            cursor: pointer;
+          }
+        }
+        .navBar{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          color: #666;
+          li{
+            margin-right: 20px;
+             cursor: pointer;
+          }
+        }
+        .nav_btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .navBtn{
+                width: 126px;
+                height: 32px;
+                background: url(../../images/icon_1.png) no-repeat ;
+                text-align: center;
+                line-height: 32px;
+                color: white;
+                cursor: pointer;
+                &:last-child{
+                    margin-left: 4px;
+                }
+            }
+        }
+        .navTel{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("../../images/btn_2.jpg") 5px -2px  no-repeat;
+            background-size: 28px;
+            padding-left: 35px;
+            p{
+                color: #2ea91e;
+                
+            }
+        }
+        
+      }
+    }
+  

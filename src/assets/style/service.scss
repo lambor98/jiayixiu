@@ -1,0 +1,43 @@
+#service{
+    h3{
+        font-size: 36px;
+        line-height: 176px;
+        height: 176px;
+        width: 100%;
+        text-align: center;
+    }
+    .mainbox{
+        padding-bottom: 50px;
+        display: flex;
+        max-width: 860px;
+        margin: auto;
+        .leftbox{
+            width: 40%;
+            
+            .note{
+                width: 80%;
+                img{
+                    width: 280px;
+                }
+                p{
+                    color: #008fc0;
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 30px 0;
+                }
+            }
+          
+        }
+        .rightbox{
+            width: 60%;
+            .formbox{
+                margin: 10px 0;
+            }
+            .address_1,.goods_1{
+                display: flex;
+                justify-content: space-between;
+            }
+            .submit{margin-top: 50px;}
+        }
+    }
+}
