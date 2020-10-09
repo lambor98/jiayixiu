@@ -1,10 +1,10 @@
 <template>
-    <div id="indexBox">
-
+    <div id="wap">
 
     </div>
 </template>
-
 <script>
-
+export default {
+    
+}
 </script>

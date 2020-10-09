@@ -1,6 +1,16 @@
-
+const webpack = require('webpack')
 
 module.exports = {
+    configureWebpack: {
+        plugins: [
+            new webpack.ProvidePlugin({
+                $:"jquery",
+     
+                jQuery:"jquery",
+                "windows.jQuery":"jquery"
+            })
+        ]
+    },
     publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
     assetsDir:"assets",
     outputDir:"dist2",
@@ -16,11 +26,11 @@ module.exports = {
         disableHostCheck:true,
         publicPath:"",
         proxy:{
-            "/h5":{
-                target:"http://api.fanli.cn",
+            "/ajax":{
+                target:"http://localhost:8888/ajax",
                 secure:false,
                 pathRewrite:{
-                    "^/h5":""
+                    "^/ajax":""
                 }
             }
         }

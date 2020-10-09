@@ -31,13 +31,33 @@
         .rightbox{
             width: 60%;
             .formbox{
-                margin: 10px 0;
+                margin: 20px 0;
+            }
+            .el-form-item__content{
+                margin-left: 0 !important;
             }
             .address_1,.goods_1{
-                display: flex;
-                justify-content: space-between;
+                    display: flex;
+                    justify-content: space-between;
+                .el-form-item__content{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-left: 0 !important;
+                }
+               
             }
+            .goods_1{
+                .el-form-item__content{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-left: 0 !important;
+                }
+            }
+          
             .submit{margin-top: 50px;}
         }
+    }
+    .el-form-item{
+        margin-bottom: 0 !important;
     }
 }

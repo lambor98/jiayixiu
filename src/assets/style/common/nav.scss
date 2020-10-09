@@ -90,6 +90,53 @@
                 
             }
         }
+        .loginBtn{
+          color:#999999 ;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding:0 30px;
+          .log-reg{
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+        .user-box{
+          width: 120px;
+          color:#666 ;
+          font-size: 12px;
+          display: flex;
+          justify-content: space-around;
+          p{
+            cursor: pointer;
+            &:first-child{
+              width: 60px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-decoration: underline;
+            }
+            &:last-child{
+              text-align: center;
+             
+              border: 1px #999999 solid;
+              border-radius: 5px;
+              width:60px;
+
+            }
+            &:last-child:hover{
+              color: red;
+              border-color: red;
+            }
+          }
+        }
+        
+      }
+      .btnBox{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 50px;
+        margin-left: 60px;
         
       }
     }

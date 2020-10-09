@@ -1,28 +1,56 @@
 import Vue from "vue"
 import Router from "vue-router"
 //组件
-import Home from "@/views/Home.vue"
+import Index from "@/views/web/index.vue"
+import Home from "@/views/web/Home.vue"
 import Service from "@/views/web/service.vue"
 import Tiyan from "@/views/web/tiyan.vue"
+import Apply from '@/views/web/apply.vue'
+import userCenter from '@/views/web/userCenter.vue'
+import Wap from '@/views/wap/index.vue'
 
 
 
 Vue.use(Router);
 const router = new Router({
-    mode:"hash",
+    mode:"history",
     routes:[
-        {path:"/",redirect:"home"},
         {
-           path:"/home",
-           component:Home,   //首页
-           name:"home" 
+           path:"/web",
+           component:Index,   //首页
+           name:"web" ,
+           redirect:"/web/index",
+           children:[
+               {
+                   path:'index',
+                   name:'home',
+                   component:Home    
+               },
+                {
+                    path:'service',
+                    name:'service',
+                    component:Service  //维修家电首页
+                },
+                {
+                    path:'apply',
+                    component:Apply, //维修工入驻
+                    name:'Apply'
+                },
+                {
+                    path:'userCenter',
+                    component:userCenter, //维修工入驻
+                    name:'userCenter'
+                }
+           ]
         },
-        {path:"/web",redirect:"home"},
+        {path:"/",redirect:'/web'},
+        // {path:'/service',component:Service,name:"serviceIndex"}
         {
-            path:"/web/service/index",
-            component:Service,  //维修家电首页
-            name:"service"
+            path:'/wap',
+            component:Wap,
+            redirect:'/wap/index',
         }
+       
     ]
 
 })
