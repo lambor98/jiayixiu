@@ -172,6 +172,7 @@ export default {
               this.$message.success("成功退出!")
               this.$cookies.remove("user")
               this.$store.commit("loginName",{uname:null,flag:false})
+              this.$router.push({name:"home"})
             }
           })
         }).catch(e=>e)

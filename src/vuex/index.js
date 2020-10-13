@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-25 17:38:37
+ * @LastEditTime: 2020-10-13 00:00:56
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \git项目\jiayixiu\src\vuex\index.js
+ */
 import Vue from "vue"
 import Vuex from "vuex"
 import {comLog,getCity} from "@/axios"
@@ -37,14 +45,17 @@ const store = new Vuex.Store({
     actions:{
         checkLogin({commit}){
             if($cookies.get("user")){
-                comLog($cookies.get("user")).then(res=>{
+                comLog().then(res=>{
                     if(res.code==400){
                         $cookies.remove("user")
                         commit("loginName",{uname:null,flag:false})
                     }else{
                         commit("loginName",{uname:$cookies.get("user").uname,flag:true})
+
                     }
                 })
+            }else{
+                commit("loginName",{uname:null,flag:false})
             }
         },
         getCityList({commit}){

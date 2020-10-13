@@ -1,7 +1,7 @@
 
 #userCenter{
     max-width: 1200px;
-    height: 500px;
+    // height: 500px;
     // background: #ddd;
     margin: auto;
     padding: 50px 0;
@@ -85,6 +85,53 @@
             text-align: center;
             justify-content: center;
         }
+       
+        .el-input.is-disabled .el-input__inner{
+            color: #606266 !important;
+            background-color:  transparent !important;
+            border-color: transparent !important;
+        }
+    }
+    h4{
+        margin: 0 0 10px 5px;
+        color: #909399;
+    }
+    #myOrder{
+        .el-pagination{
+            float: right;
+            padding: 20px 0;
+        }
+       .searchBox{
+           display: flex;
+           justify-content: flex-start;
+            .el-form-item{
+                width: 210px;
+                margin-bottom: 10px !important;
+                .el-form-item__label{
+                    font-size: 12px;
+                }
+            }
+            // .selectType{
+            //     input{
+            //         width: 120px !important;
+            //     }
+            // }
+            .searchBtn{
+                // height: 30px !important;
+                // line-height: 30px;
+                width: 130px;
+                padding-left: 15px;
+            }
+        .el-input{
+            width: auto !important;
+            input{
+                height: 30px;
+                width: 130px;
+            }
+           
+        }
+       }
+       
     }
     
   }

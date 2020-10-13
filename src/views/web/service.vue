@@ -73,7 +73,7 @@
                         <el-date-picker
                             style="width:100%"
                             v-model="form.goTime"
-                            format="yyyy 年 MM 月 dd 日 hh 时 mm 分钟"
+                            format="yyyy 年 MM 月 dd 日 HH 时 mm 分钟"
                             type="datetime"
                             placeholder="上门时间"
                             :picker-options="pickerOptions">>
@@ -166,13 +166,24 @@ export default {
             this.brandList = item.type;
         },
         submitForm(formName){ //提交
+            // function fill(value){
+            //     if(value*1<10){
+            //     return "0"+value
+            //     }else{
+            //     return value
+            //     }
+            // }
             if(this.$store.state.isLogin){
                 this.$refs[formName].validate((valid,object) => {
                 if (valid) {
                     let obj = Object.assign(this.$cookies.get("user"),this.form)
                     console.log(obj)
                     obj.tjTime = new Date()
-                    submitOrder(obj).then(res=>{
+                    // this.form.dizhi = this.form.province+'省(市)'+this.form.city+'市'+this.form.area+this.form.address
+                    // this.form.jiadian = this.form.jdBrand+this.form.jdType
+                    // let date = new Date(this.form.goTime)
+                    // this.form.shangmen =date.getFullYear()+'-'+fill((date.getMonth()+1))+'-'+fill(date.getDate())+' '+fill(date.getHours())+':'+fill(date.getMinutes())
+                    submitOrder({type:'insert',data:obj}).then(res=>{
                         if(res.code==200){
                         this.$message({message:'提交成功', type: 'success' });
                         this.$router.go(0)

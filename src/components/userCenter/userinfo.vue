@@ -1,5 +1,6 @@
 <template>
     <div id="userinfo" class="clearfix">
+        <h4>个人信息</h4>
         <el-form ref="form" :model="form" label-width="80px" style="width:300px" :rules="rules" >
             <el-form-item label="用户名">
                 <el-input v-model="form.uname" :disabled='true' size="small"></el-input>
@@ -47,8 +48,17 @@ export default {
         }
     },
     mounted(){
-        findUser({id:this.info.id}).then(res=>{
-            this.form = res.data
+        findUser({}).then(res=>{
+            if(res.code==200){
+                this.form = res.data
+            }else{
+                this.$message.error(res.txt)
+                // this.$cookies.remove("user");
+                // setTimeout(()=>{
+                //     this.$router.replace({name:'home'})
+                // },1000)
+            }
+            
         })
     },
     methods:{

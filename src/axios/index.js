@@ -14,6 +14,10 @@ export const uploadPic = data =>ajax(PRE_URL+'/uploadPic',data,'post')
 export const employeeApply = data =>ajax(PRE_URL+'/employeeApply',data,'post')
 export const findUser = data =>ajax(PRE_URL+'/findUser',data,'post')
 export const updateUser = data =>ajax(PRE_URL+'/updateUser',data,'post')
+export const checkPwd = data =>ajax(PRE_URL+'/checkPwd',data,'post')
+export const updatePwd = data =>ajax(PRE_URL+'/updatePwd',data,'post')
+
+
 
 
 

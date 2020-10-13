@@ -1,10 +1,22 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-10-08 19:37:39
+ * @LastEditTime: 2020-10-13 00:05:20
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \git项目\jiayixiu\src\views\web\userCenter.vue
+-->
 <template>
     <div id="userCenter" class="clearfix">
         <div class="left">
             <h5 @click="slide">我的信息<img @click="slides" src="@/assets/images/point.png" alt=""></h5>
             <ul>
                 <li class="choose" @click="choose" data-id='Userinfo'>个人信息</li>
-                <li @click="choose">修改密码</li>
+                <li @click="choose" data-id='UpdatePwd'>修改密码</li>
+            </ul>
+            <h5 @click="slide">我的订单<img @click="slides" src="@/assets/images/point.png" alt=""></h5>
+            <ul>
+                <li @click="choose" data-id='MyOrder' >订单信息</li>
             </ul>
         </div>
         <div class="right">
@@ -14,16 +26,29 @@
 </template>
 <script>
 import '@/assets/style/userCenter.scss'
-import Userinfo from '@/components/userinfo.vue'
+import Userinfo from '@/components/userCenter/userinfo.vue'
+import UpdatePwd from '@/components/userCenter/updatePwd.vue'
+import MyOrder from '@/components/userCenter/myOrder.vue'
+import {comLog} from"@/axios"
+
 export default {
     components:{
-                Userinfo
+                Userinfo,UpdatePwd,MyOrder
         },
     data(){
         return{
             userinfo:null,
             views:'Userinfo',
         }
+    },
+    beforeMount(){
+       this.$store.dispatch('checkLogin').then(()=>{
+           if(!this.$store.state.isLogin){
+               this.$message.error('您未登录')
+               this.$router.push({name:"home"})
+           }
+
+       })
     },
     mounted(){
         this.userinfo = this.$cookies.get('user');
