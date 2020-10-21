@@ -1,0 +1,117 @@
+#myOrder{
+    color: #323233; 
+    font-size: 12px;
+    .mainBox{
+        margin-top: .2rem !important;
+        .van-cell{
+            font-size: 12px !important;
+            // line-height:  12px !important;
+        }
+        width: 95%;
+        margin: auto;
+        // height: 4rem;
+        background: #fff;
+        .top_bar{
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            // padding: .3rem;
+            padding: .2rem .5rem; 
+            // border-bottom: .1px #DCDFE6 solid;
+            box-sizing: border-box;
+            p{
+             color: #606266; 
+             &:last-child{
+                padding-right: .3rem;
+                font-size: 14px;
+             } 
+            }
+        }
+        .mid_bar{
+            display: flex;
+            .mid_bar_left{
+                width: 20%;
+                padding: .5rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+            .mid_bar_mid{
+                width: 60%;
+                padding: .3rem 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                // align-items: center;
+                justify-items: center;
+                justify-content: center;
+                p{
+                        text-overflow: -o-ellipsis-lastline;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    span{
+                        margin-left: .1rem;
+                        color: #7b7e85;
+                    }
+                    &:first-child{
+                        padding-bottom: .2rem;
+                    }
+                }
+            }
+            .mid_bar_right{
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                }
+                span{
+                    img{
+                        // display: inline;
+                        width: .6rem;
+                    }
+                }
+            }
+        }
+        .type_bar{
+            padding-top: .2rem;
+            padding-left: .9rem;
+        }
+        .time_bar{
+            width: 90%;
+            margin: auto;
+            p{
+                text-align: right;
+                padding: .2rem;
+            }
+        }
+    }
+    .red{
+        .van-cell__value{
+            color: red;
+        }
+    }
+    .ready{
+        .van-cell__value{
+            color: rgb(158, 158, 226);
+        }
+    }
+    .going{
+        .van-cell__value{
+            color: #008000;
+        }
+    }
+}

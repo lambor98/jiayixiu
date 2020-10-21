@@ -1,0 +1,21 @@
+#wapHome{
+    padding-bottom: 2rem;
+    img{width: 100%;}
+    .logo{
+       display: flex;
+       justify-content: center;
+       padding: .4rem 0;
+    //    background-color: rgb(23, 85, 150);
+        img{
+                width: 2rem ;
+                height: 2rem;
+            }
+            p{
+                line-height: 2rem;
+                margin-left: .3rem;
+                color: #646566;
+                font-weight: bold;
+            }
+    }
+   
+}

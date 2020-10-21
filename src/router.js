@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-25 17:38:37
- * @LastEditTime: 2020-10-13 00:02:25
+ * @LastEditTime: 2020-10-13 13:33:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \git项目\jiayixiu\src\router.js
@@ -17,7 +17,16 @@ import Tiyan from "@/views/web/tiyan.vue"
 import Apply from '@/views/web/apply.vue'
 import userCenter from '@/views/web/userCenter.vue'
 import Wap from '@/views/wap/index.vue'
+import WapHome from "@/views/wap/wapHome.vue"
 import {comLog} from"@/axios"
+import WapLogin from "@/views/wap/login.vue"
+import WapService from "@/views/wap/service.vue"
+import WapApply from '@/views/wap/apply.vue'
+import WapUserCenter from "@/views/wap/userCenter.vue"
+import WapUserInfo from "@/views/wap/userinfo.vue"
+import WapUpdatePwd from "@/views/wap/updatePwd.vue"
+import WapMyOrder from "@/views/wap/myOrder.vue"
+
 
 
 
@@ -57,13 +66,58 @@ const router = new Router({
                 }
            ]
         },
-        {path:"*",redirect:'/web'},
-        // {path:'/service',component:Service,name:"serviceIndex"}
         {
             path:'/wap',
             component:Wap,
+            name:'wapHome',
             redirect:'/wap/index',
-        }
+            children:[
+                {
+                    path:'index',
+                    name:'wapHome',
+                    component:WapHome
+                },
+                {
+                    path:'login',
+                    name:'wapLogin',
+                    component:WapLogin
+                },
+                {
+                    path:'service',
+                    name:'wapService',
+                    component:WapService
+                },
+                {
+                    path:'apply',
+                    name:'wapApply',
+                    component:WapApply
+                },{
+                    path:'userCenter',
+                    name:"wapUserCenter",
+                    component:WapUserCenter,
+                    children:[
+                        
+                    ]
+                },
+                {
+                    path:'userinfo',
+                    name:'wapUserInfo',
+                    component:WapUserInfo,
+                },
+                {
+                    path:'updatePwd',
+                    name:'wapUpdatePwd',
+                    component:WapUpdatePwd
+                },
+                {
+                    path:'myOrder',
+                    name:'wapMyOrder',
+                    component:WapMyOrder
+                }
+            ]
+        },
+        {path:"*",redirect:'/web'},
+        
        
     ]
 

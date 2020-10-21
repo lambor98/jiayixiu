@@ -207,8 +207,8 @@
         <el-form-item class="customerName" prop="name">
             <el-input :disabled='flag' v-model="form.name" placeholder="联系人姓名"></el-input>
         </el-form-item>
-        <el-form-item class="phone"  prop="phone">
-            <el-input :disabled='flag' v-model="form.phone" placeholder="联系电话"></el-input>
+        <el-form-item class="phone"  prop="tel">
+            <el-input :disabled='flag' v-model="form.tel" placeholder="联系电话"></el-input>
         </el-form-item>
         <div class="topStauts">
             <el-form-item label="提交时间:" style='width:50%'>
@@ -247,8 +247,8 @@ export default {
                     problem:[{required:true,message:'请填写您家电的具体问题', trigger: 'change'}],
                     goTime:[{required:true,message:'请填写您方便的上门时间', trigger: 'change'}],
                     name:[{required:true,message:'请填写您的称呼', trigger: 'change'}],
-                    phone:[{required:true,message:'手机号码不能为空',trigger:'change'},
-                            {pattern:/^[1][3,4,5,6,7,8,9][0-9]{9}$/, message: '请出入正确的手机号', trigger: 'change'}
+                    tel:[{required:true,message:'手机号码不能为空',trigger:'blur'},
+                            {pattern:/^[1][3,4,5,6,7,8,9][0-9]{9}$/, message: '请出入正确的手机号', trigger: 'blur'}
                           ],
                 },
           tableData:null, //表格数据

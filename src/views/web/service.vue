@@ -176,17 +176,19 @@ export default {
             if(this.$store.state.isLogin){
                 this.$refs[formName].validate((valid,object) => {
                 if (valid) {
-                    let obj = Object.assign(this.$cookies.get("user"),this.form)
-                    console.log(obj)
-                    obj.tjTime = new Date()
+                    // let obj = Object.assign(this.$cookies.get("user"),this.form)
+                    // console.log(obj)
+                    // obj.tjTime = new Date()
                     // this.form.dizhi = this.form.province+'省(市)'+this.form.city+'市'+this.form.area+this.form.address
                     // this.form.jiadian = this.form.jdBrand+this.form.jdType
                     // let date = new Date(this.form.goTime)
                     // this.form.shangmen =date.getFullYear()+'-'+fill((date.getMonth()+1))+'-'+fill(date.getDate())+' '+fill(date.getHours())+':'+fill(date.getMinutes())
-                    submitOrder({type:'insert',data:obj}).then(res=>{
+                    submitOrder({type:'insert',data:this.form}).then(res=>{
                         if(res.code==200){
                         this.$message({message:'提交成功', type: 'success' });
-                        this.$router.go(0)
+                        setTimeout(()=>{
+                            this.$router.go(0)
+                        },1000)
                         }else{
                         this.$message.error(res.txt);
                         }

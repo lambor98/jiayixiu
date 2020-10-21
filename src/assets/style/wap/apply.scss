@@ -1,0 +1,61 @@
+#wapApply{
+    // width: 90%;
+    // margin: 10px auto;
+    // .title{
+    //     h5{font-size: .5rem;text-align: center;}
+    //     p{
+    //         font-size: .4rem;
+    //         padding: .1rem .2rem;
+    //     }
+    // }
+    .topBtn{
+        display: flex;
+        justify-content: space-between;
+        .van-button--default{
+            border: 1px solid transparent !important;
+            color: #576b95;
+        }
+        .topBtn_btn{
+            font-size: 12px !important;
+            padding: .2rem .5rem;
+            color: #576b95;
+        }
+
+    }
+       .uploadPic{
+           background: #fff;
+           padding: 10px 0px ;
+           width: 100%;
+           display: flex;
+           justify-content: flex-start;
+           .uploadPic_left{
+            width: 6.2em;
+            font-size: 14px;
+            height: 6.2em;
+            text-align: left;
+            line-height: 6.2em;
+            padding-left: 16px;
+            box-sizing: border-box;
+            margin-right: 12px;
+            color: #646566;
+           }
+           .uploadPic_right{
+               padding-left: 16px;
+           }
+           .uploadPic_tip{
+               color: red;
+               font-size: 12px;
+                line-height: 6.2em;
+                padding-left: .8rem;
+           }
+       }
+       .codeBtn{
+            color: #fff;
+            background-color: #07c160;
+            border: 1px solid #07c160;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            width: 3rem;
+       }
+}

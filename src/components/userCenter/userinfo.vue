@@ -42,7 +42,7 @@ export default {
             flag:true,
             flag1:false,
             rules:{
-                 tel:[{required:true,message:'手机号码不能为空',trigger:'change'},
+                 tel:[{required:true,message:'手机号码不能为空',trigger:'blur'},
                     {pattern:/^[1][3,4,5,6,7,8,9][0-9]{9}$/ , message: '请出入正确的手机号', trigger: 'blur'}],
             }
         }
@@ -87,8 +87,19 @@ export default {
     },
     filters:{
         timeFlt:function(value){
-           let time= new Date(value);
-           return time.getFullYear()+'年'+(time.getMonth()*1+1)+'月'+time.getDate()+'日'+time.getHours()+':'+time.getMinutes();
+            if(value){
+                function fill(value){
+                    if(value*1<10){
+                    return "0"+value
+                    }else{
+                    return value
+                    }
+                }
+                let time= new Date(value);
+                return time.getFullYear()+'年'+fill(time.getMonth()*1+1)+'月'+fill(time.getDate())+'日'+fill(time.getHours())+':'+fill(time.getMinutes());
+            }else{
+                return ''
+            }
         }
     },
     computed: {
